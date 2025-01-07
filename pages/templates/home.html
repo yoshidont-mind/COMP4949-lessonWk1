@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Home page</h1>
+
+  <h3>First Name: {{firstName}}</h3>
+  <h3>Last Name: {{lastName}}</h3>
+
+  <h3>Showing number list.</h3>
+  <ul>
+    {% for mynumber in mynumbers %}
+        <li>{{mynumber}}</li>
+    {% endfor %}
+  </ul>
+   
+{% endblock content %}
