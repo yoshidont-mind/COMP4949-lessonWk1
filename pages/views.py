@@ -4,6 +4,7 @@ from django.urls import reverse
 from django.views.generic import TemplateView
 import pickle
 import pandas as pd
+import pdb
 
 def homePageView(request):
     return render(request, 'home.html')
@@ -33,6 +34,11 @@ def homePost(request):
         # Extract value from request object by control name.
         currentChoice = request.POST['choice']
         gmatStr = request.POST['gmat']
+
+        print("Just before Tatsuya's breakpoint")
+        pdb.set_trace()
+        breakpoint()
+        print("Just after breakpoint")
 
         # Crude debugging effort.
         print("*** Years work experience: " + str(currentChoice))
