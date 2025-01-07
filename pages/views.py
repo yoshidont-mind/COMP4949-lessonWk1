@@ -35,11 +35,6 @@ def homePost(request):
         currentChoice = request.POST['choice']
         gmatStr = request.POST['gmat']
 
-        print("Just before Tatsuya's breakpoint")
-        pdb.set_trace()
-        breakpoint()
-        print("Just after breakpoint")
-
         # Crude debugging effort.
         print("*** Years work experience: " + str(currentChoice))
         choice = int(currentChoice)
