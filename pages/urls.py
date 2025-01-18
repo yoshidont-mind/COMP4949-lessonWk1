@@ -1,5 +1,5 @@
 from django.urls import path, include
-from .views import homePageView, aboutPageView, tatsuyaPageView, homePost, results, todos, register, message, logoutView
+from .views import homePageView, aboutPageView, tatsuyaPageView, homePost, results, todos, register, message, logoutView, secretArea
 
 urlpatterns = [
     path('', homePageView, name='home'),
@@ -12,4 +12,5 @@ urlpatterns = [
     path('message/<str:msg>/<str:title>/', message, name="message"),
     path('', include("django.contrib.auth.urls")),
     path("logout/", logoutView, name="logout"),
+    path("secret/", secretArea, name="secret"),
 ]
